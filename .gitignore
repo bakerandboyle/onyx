@@ -1,0 +1,288 @@
+# ==============================================================================
+# OnYX .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Build Directories
+# ------------------------------------------------------------------------------
+build/
+cmake-build-*/
+out/
+bin/
+lib/
+*.bundle/
+
+# ------------------------------------------------------------------------------
+# CMake Generated
+# ------------------------------------------------------------------------------
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!cmake/*.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+_deps/
+CMakeUserPresets.json
+
+# ------------------------------------------------------------------------------
+# IDE / Editor
+# ------------------------------------------------------------------------------
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# CLion / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+Debug/
+Release/
+x64/
+x86/
+[Bb]uild.*/
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.moved-aside
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+Makefile*
+*build-*
+
+# Kate
+.*.kate-swp
+.swp.*
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Vim
+*.swp
+*.swo
+*~
+tags
+
+# ------------------------------------------------------------------------------
+# Compiled Objects
+# ------------------------------------------------------------------------------
+*.o
+*.obj
+*.lo
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.pdb
+*.ilk
+*.exp
+
+# CUDA
+*.cubin
+*.fatbin
+*.ptx
+*.gpu
+*.i
+*.ii
+*.s
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# ------------------------------------------------------------------------------
+# OFX Plugin
+# ------------------------------------------------------------------------------
+*.ofx
+*.ofx.bundle/
+
+# ------------------------------------------------------------------------------
+# Package / Archive
+# ------------------------------------------------------------------------------
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.msi
+*.exe
+
+# ------------------------------------------------------------------------------
+# Test / Coverage
+# ------------------------------------------------------------------------------
+*.gcno
+*.gcda
+*.gcov
+coverage/
+coverage.info
+*.lcov
+htmlcov/
+.coverage
+.tox
+.nox
+.pytest_cache/
+
+# GoogleTest
+googletest-*/
+Testing/
+
+# ------------------------------------------------------------------------------
+# Documentation
+# ------------------------------------------------------------------------------
+docs/_build/
+docs/html/
+docs/latex/
+doxygen/
+Doxyfile.bak
+
+# ------------------------------------------------------------------------------
+# Dependencies (if not using submodules)
+# ------------------------------------------------------------------------------
+# external/openfx/    # Uncomment if using git submodule
+# third_party/
+
+# ------------------------------------------------------------------------------
+# OS Generated
+# ------------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ------------------------------------------------------------------------------
+# Logs / Debug Output
+# ------------------------------------------------------------------------------
+*.log
+*.csv
+!tests/fixtures/*.csv
+debug/
+logs/
+
+# ------------------------------------------------------------------------------
+# Secrets / Local Config
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+credentials/
+
+# License files (development only)
+*.lic
+license.dat
+
+# ------------------------------------------------------------------------------
+# Temporary
+# ------------------------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# ------------------------------------------------------------------------------
+# Profiling
+# ------------------------------------------------------------------------------
+*.prof
+*.nvprof
+*.nsys-rep
+*.qdrep
+*.sqlite
+callgrind.*
+cachegrind.*
+massif.*
+
+# ------------------------------------------------------------------------------
+# Generated Version Header
+# ------------------------------------------------------------------------------
+generated/
+Version.h
+!cmake/Version.h.in

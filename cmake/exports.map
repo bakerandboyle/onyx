@@ -1,0 +1,13 @@
+# OnYX Symbol Visibility Map
+# Only export OFX plugin entry points, hide everything else
+
+ONYX_1.0 {
+    global:
+        # OFX Plugin Entry Points (required by OFX spec)
+        OfxGetNumberOfPlugins;
+        OfxGetPlugin;
+        
+    local:
+        # Hide all other symbols
+        *;
+};
