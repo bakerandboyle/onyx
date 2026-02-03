@@ -1,0 +1,38 @@
+# .github/workflows/build.yml
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CUDA
+        uses: Jimver/cuda-toolkit@v0.2.11
+        with:
+          cuda: '12.2.0'
+      - name: Configure
+        run: |
+          git clone https://github.com/AcademySoftwareFoundation/openfx.git external/openfx
+          mkdir build && cd build
+          cmake .. -DCMAKE_BUILD_TYPE=Release -DONYX_BUILD_TESTS=OFF
+      - name: Build
+        run: cmake --build build --parallel
+
+  build-windows:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CUDA
+        uses: Jimver/cuda-toolkit@v0.2.11
+        with:
+          cuda: '12.2.0'
+      - name: Configure
+        run: |
+          git clone https://github.com/AcademySoftwareFoundation/openfx.git external/openfx
+          mkdir build
+          cd build
+          cmake .. -DCMAKE_BUILD_TYPE=Release -DONYX_BUILD_TESTS=OFF
+      - name: Build
+        run: cmake --build build --config Release
